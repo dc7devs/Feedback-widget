@@ -1,15 +1,7 @@
-interface ButtonsProps {
-  text: string;
-}
+import { Widget } from "./components/Widgets"
 
-function Button({ text }: ButtonsProps) {
-  return <button className="bg-violet-500 px-4">{ text }</button>
-}
-
-function App() {
+export function App() {
   return (
-    <Button text="Enter"/>
-  )
+      <Widget />
+  );
 }
-
-export default App
