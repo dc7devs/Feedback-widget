@@ -3,7 +3,7 @@ import { Camera, Trash } from "phosphor-react";
 import html2canvas from "html2canvas";
 import { Loading } from "./Loading";
 
-interface ScreenshotTokiProps {
+interface ScreeshotTookProps {
     screenshot: string | null;
     onScreenshotTook: (screenshot: string | null) => void;
 }
@@ -11,7 +11,7 @@ interface ScreenshotTokiProps {
 export function ScreenShotButton({
     screenshot,
     onScreenshotTook
-}: ScreenshotTokiProps) {
+}: ScreeshotTookProps) {
     const [ isTakingScreenshot, setIsTakingScreenshot ] = useState(false);
 
     async function handleTakeScreenShot() {
@@ -32,7 +32,7 @@ export function ScreenShotButton({
                 className="p-1 w-10 h-10 rounded-md border-transparent flex justify-end items-end text-zinc-400 hover:text-zinc-100 transition-colors"
                 onClick={() => onScreenshotTook(null)}
                 style={{
-                    backgroundImage: `url${screenshot}`,
+                    backgroundImage: `url(${screenshot})`,
                     backgroundPosition: 'right bottom',
                     backgroundSize: 180,
                 }}
