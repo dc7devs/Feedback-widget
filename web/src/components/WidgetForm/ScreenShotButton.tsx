@@ -23,7 +23,6 @@ export function ScreenShotButton({
         onScreenshotTook(base64image);
         setIsTakingScreenshot(false);
     }
-    console.log(screenshot);
 
     if(screenshot) {
         return(
